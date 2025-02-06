@@ -384,7 +384,7 @@ nav a:hover::before {
 .countdown-timer {
     font-size: 1.2rem;
     font-weight: bold;
-    background: #007bff;
+    background: #aab3bd;
     color: #fff;
     padding: 0.5rem 1rem;
     border-radius: 10px;
@@ -441,5 +441,4 @@ nav a:hover::before {
         max-width: 150px; /* Reducir tamaño en móviles pequeños */
     }
 }
-
 
