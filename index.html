@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>- Señor Rick - s</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="index.css">
+
+    <style>
+
+ 
+
+       
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+            font-family: 'Roboto', sans-serif;
+
+        }
+
+ 
+
+        body {
+
+            background: #f4f4f9;
+
+            color: #333;
+
+            line-height: 1.6;
+
+        }
+
+ 
+
+        header {
+
+            background: #333;
+
+            color: #fff;
+
+            padding: 1rem 0;
+
+            text-align: center;
+
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        }
+
+ 
+
+        header h1 {
+
+            font-size: 2.5rem;
+
+            text-transform: uppercase;
+
+        }
+
+ 
+
+        nav {
+
+            margin: 1rem 0;
+
+        }
+
+ 
+
+        nav a {
+
+            color: #fff;
+
+            margin: 0 15px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+        }
+
+ 
+
+        .container {
+
+            max-width: 1200px;
+
+            margin: 2rem auto;
+
+            padding: 0 20px;
+
+        }
+
+ 
+
+        .file-card {
+
+            background: #fff;
+
+            padding: 1.5rem;
+
+            margin-bottom: 1.5rem;
+
+            border-radius: 10px;
+
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+            transition: transform 0.2s ease;
+
+        }
+
+ 
+
+        .file-card:hover {
+
+            transform: translateY(-5px);
+
+        }
+
+ 
+
+        .file-card h2 {
+
+            font-size: 1.5rem;
+
+            margin-bottom: 0.5rem;
+
+        }
+
+ 
+
+        .file-card p {
+
+            margin-bottom: 1rem;
+
+        }
+
+ 
+
+        .download-btn {
+
+            background: #007bff;
+
+            color: #fff;
+
+            padding: 0.5rem 1rem;
+
+            text-decoration: none;
+
+            border-radius: 5px;
+
+            transition: background 0.3s ease;
+
+        }
+
+ 
+
+        .download-btn:hover {
+
+            background: #4c87c6;
+
+        }
+
+ 
+
+        footer {
+
+            background: #333;
+
+            color: #fff;
+
+            text-align: center;
+
+            padding: 1rem 0;
+
+            margin-top: 2rem;
+
+        }
+
+ 
+
+        .ad-container {
+
+            margin: 2rem 0;
+
+            text-align: center;
+
+        }
+
+ 
+
+ 
+
+ 
+
+  @media (min-width: 768px) {
+
+            .file-list {
+
+                display: grid;
+
+                grid-template-columns: repeat(3, 1fr);
+
+                gap: 1.5rem;
+
+            }
+
+        }
+
+ 
+
+        /* Estilos de la sección Premium */
+
+        #premium {
+
+            background: #f0f8ff;
+
+            padding: 50px 20px;
+
+            margin-top: 2rem;
+
+            border-radius: 10px;
+
+        }
+
+ 
+
+        #premium h2 {
+
+            font-size: 2rem;
+
+            margin-bottom: 1rem;
+
+            color: #007bff;
+
+        }
+
+ 
+
+        #premium p {
+
+            font-size: 1.2rem;
+
+            color: #333;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Sr Rick</h1>
+
+        <div class="container">
+
+            <div class="header-image">
+
+                <img src="imagenes/rick.png" alt="Señor Rick">
+
+            </div>
+
+        <nav>
+
+            <a href="#premium">Curso gratis de la semana</a>
+
+        </nav>
+
+    </header>
+
+ 
+
+    <div class="container">
+
+        <div class="ad-container">
+
+            <!-- Aquí puedes insertar el código de Google AdSense -->
+
+        </div>
+
+ 
+
+        <div class="chatbot-container" onclick="window.location.href='https://wa.me/573238632028'">
+
+            <div class="chatbot-avatar">
+
+                <img src="imagenes/chat.gif" alt="Avatar del chatbot">
+
+            </div>
+
+            <div class="chatbot-text">
+
+                <p>¡Habla con Rick!</p>
+
+            </div>
+
+        </div>
+
+       
+
+       
+
+ 
+
+        <section class="file-list">
+
+            <div class="file-card">
+
+                <h2>Archivo 1</h2>
+
+                <p>Descripción breve del archivo.</p>
+
+                <a href="https://wa.me/+573238632028?text=Hola%2C%20quiero%20el%20Archivo%201" class="download-btn" target="_blank">Solicitar por WhatsApp</a>
+
+            </div>
+
+            <div class="file-card">
+
+                <h2>Archivo 2</h2>
+
+                <p>Descripción breve del archivo.</p>
+
+                <a href="https://wa.me/+573238632028?text=Hola%2C%20quiero%20el%20Archivo%202" class="download-btn" target="_blank">Solicitar por WhatsApp</a>
+
+            </div>
+
+            <div class="file-card">
+
+                <h2>Archivo 3</h2>
+
+                <p>Descripción breve del archivo.</p>
+
+                <a href="https://wa.me/+573238632028?text=Hola%2C%20quiero%20el%20Archivo%203" class="download-btn" target="_blank">Solicitar por WhatsApp</a>
+
+            </div>
+
+        </section>
+
+ 
+
+        <div class="ad-container">
+
+            <!-- Más espacio para publicidad -->
+
+            <p>Adquiere</p>
+
+        </div>
+
+ 
+
+        <!-- Sección Premium -->
+
+        <section id="premium">
+
+            <h2>Curso gratis de la semana</h2>
+
+            <div class="premium-content">
+
+                <p>¡Este archivo es gratis solo por esta semana! Obtén acceso exclusivo al archivo.</p>
+
+               
+
+                <div class="whatsapp-links">
+
+                    <a href="https://wa.me/+573238632028?text=Hola%2C%20quiero%20consultar%20sobre%20el%20Archivo%201" class="image1" target="_blank"></a>
+
+                </div>
+
+               
+
+                <!-- Contenedor para la cuenta regresiva -->
+
+                <div class="countdown-timer">
+
+                    <p><strong>Tiempo restante:</strong></p>
+
+                    <div id="countdown"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+        <script>
+
+    // Fecha objetivo para la cuenta regresiva (aquí puedes poner la fecha que desees)
+
+    var targetDate = new Date("Feb 13, 2025 23:59:59").getTime();
+
+ 
+
+    var countdownInterval = setInterval(function() {
+
+        var now = new Date().getTime();
+
+        var timeLeft = targetDate - now;
+
+ 
+
+        // Cálculos de tiempo restante
+
+        var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+
+        var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+        var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+
+        var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+ 
+
+        // Mostrar la cuenta regresiva
+
+        document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+ 
+
+        // Si la cuenta regresiva llega a cero, mostrar mensaje
+
+        if (timeLeft < 0) {
+
+            clearInterval(countdownInterval);
+
+            document.getElementById("countdown").innerHTML = "¡La oferta ha expirado!";
+
+        }
+
+    }, 1000);
+
+</script>
+
+ 
+
+       
+
+ 
+
+    <footer>
+
+        <p>&copy; 2024 Señor Rick. Todos los derechos reservados.</p>
+
+    </footer>
+
+</body>
+
+</html>
+
+ 
