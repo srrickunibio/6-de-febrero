@@ -1,8 +1,9 @@
 
 .header-image img {
     max-width: 160px; /* Ajusta el tamaño máximo */
+    
     border-radius: 60px; /* Bordes redondeados */
-    border: 2px solid #333; /* Borde alrededor de la imagen */
+    border: 2px solid #e01818b5; /* Borde alrededor de la imagen */
     animation: float 3s ease-in-out infinite; /* Animación de flotación */
 }
 
@@ -22,7 +23,7 @@
 
 
 nav a {
-    color: #fff;
+    color: #fefefe;
     text-decoration: none;
     font-size: 22px;
     font-weight: bold;
@@ -111,8 +112,8 @@ nav a:hover::before {
 
 /* Contenido Premium con fondo limpio */
 #premium .premium-content {
-    background: #fff;
-    color: #333;
+    background: #586de728;
+    color: #e31212;
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -159,14 +160,21 @@ nav a:hover::before {
 
 /* Específicos de cada imagen */
 /* Curso gratis________ */
-#premium .whatsapp-links .image1 {
-    background-image: url('imagenes/rick.png'); /* Cambia la ruta por la imagen que elijas */
-    margin-left: 5%;
-    width: 200px; /* Ajusta el tamaño según necesites */
-    height: 200px;
+.contenedor-dragon-ball {
+    background-image: url('imagenes/dragon ball.jpg'); /* Cambia por tu imagen */  
     background-size: cover;
     background-position: center;
-    cursor: pointer; /* Para indicar que es interactivo */
+    width: 90%; /* Ajusta el tamaño */
+    height: 250px; /* Ajusta según necesites */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 0 15px rgba(119, 106, 6, 0.893); /* Glow anaranjado estilo Dragon Ball */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Efecto al pasar el mouse */
+.contenedor-dragon-ball:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 28px rgba(138, 105, 65, 0.798);
 }
 
 
@@ -176,7 +184,7 @@ nav a:hover::before {
 /* Botón Premium sencillo pero elegante */
 #premium .download-btn {
     background: #00bcd4; /* Azul suave */
-    color: #fff;
+    color: #c00202;
     padding: 12px 24px;
     font-size: 1.1rem;
     text-transform: uppercase;
@@ -196,7 +204,8 @@ nav a:hover::before {
 #premium .premium-icons {
     display: flex;
     justify-content: space-around;
-    margin-top: 30px;
+    
+    margin-left: 80px;
     opacity: 0;
     transform: scale(0.8);
     animation: iconAppear 1s 0.5s forwards ease-in-out;
@@ -256,11 +265,11 @@ nav a:hover::before {
 }
 
 .chatbot-text p {
-    color: #fff;
+    color: #030202;
     font-size: 16px;
     font-weight: bold;
     margin: 0;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    text-shadow: 0 2px 4px rgba(71, 143, 16, 0.4);
     transition: all 0.3s ease;
     padding-left: 5px;  /* Añadido para acercar más el texto a la imagen */
 }
@@ -295,7 +304,7 @@ nav a:hover::before {
 
 .chatbot-container:hover .chatbot-text p {
     font-size: 18px;
-    color: #ffcc00;
+    color: #890707;
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
 }
 
@@ -307,7 +316,7 @@ nav a:hover::before {
 @media screen and (max-width: 768px) {
     .header-image img {
         max-width: 100px;  /* Ajustamos el tamaño para dispositivos móviles */
-        border-radius: 50%;  /* Hacemos los bordes más redondeados */
+        border-radius: 100px;  /* Hacemos los bordes más redondeados */
     }
 
     nav a {
@@ -396,17 +405,76 @@ nav a:hover::before {
 #countdown {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #fff;
+    color: #180808b6;
 }
 
 /* Estilos de la imagen */
-.image1 {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 200px;
-    height: auto;
+.cool-button {
+    background: linear-gradient(45deg, #ece7e4, #060f4f); /* Degradado tipo fuego */
+    color: rgba(247, 245, 242, 0.925);
+    padding: 15px 30px;
+    border-radius: 50px; /* Bordes redondeados para un look premium */
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px black;
+    box-shadow: 0 0 15px rgba(255, 140, 0, 0.405); /* Glow anaranjado */
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: latido 1.5s infinite alternate; /* Efecto de latido */
+    position: relative;
+    overflow: hidden;
 }
+
+/* Efecto de hover */
+.cool-button:hover {
+    transform: scale(1.1); /* Se agranda ligeramente */
+    box-shadow: 0 0 25px rgba(255, 140, 0, 1);
+}
+
+/* Efecto al presionar */
+.cool-button:active {
+    transform: scale(0.95); /* Se comprime un poco */
+    box-shadow: 0 0 10px rgba(255, 140, 0, 1);
+}
+
+/* Animación de latido */
+@keyframes latido {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+/* Efecto de brillo dinámico */
+.cool-button::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 60%);
+    transform: rotate(25deg);
+    animation: brillo 2s infinite linear;
+}
+
+/* Movimiento del brillo */
+@keyframes brillo {
+    0% {
+        top: -50%;
+        left: -50%;
+    }
+    100% {
+        top: 150%;
+        left: 150%;
+    }
+}
+
 
 /* Responsividad */
 @media (max-width: 768px) {

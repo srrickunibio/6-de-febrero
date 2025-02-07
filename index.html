@@ -178,9 +178,9 @@
 
         footer {
 
-            background: #333;
+            background: #010000;
 
-            color: #fff;
+            color: #fffcfc;
 
             text-align: center;
 
@@ -226,7 +226,7 @@
 
         #premium {
 
-            background: #f0f8ff;
+            background: #fdfdfd;
 
             padding: 50px 20px;
 
@@ -264,25 +264,188 @@
 
 <body>
 
+
     <header>
+        <header>
+            <h1>Sr Rick</h1>
+            <div class="container">
+                <div class="header-image">
+                    <img src="imagenes/rick.png" alt="Señor Rick">
+                </div>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="#premium">Curso gratis de la semana</a></li>
+                        <li class="dropdown">
+                            <a href="#">Más información</a>
+                            <ul class="dropdown-content">
+                                <li><a href="#dragon-ball">Dragon Ball</a></li>
+                                <li><a href="#otros-archivos">Otros archivos</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <section id="informacion">
+            <div class="container">
+                <h2>Información Detallada</h2>
+                <p>Encuentra detalles exclusivos sobre nuestros archivos, incluyendo contenido, ventajas y cómo acceder a ellos.</p>
+            </div>
+        </section>
+        
+        <style>
+            .menu {
+                list-style: none;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                background: #222;
+                border-radius: 8px;
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            }
+            .menu li {
+                position: relative;
+            }
+            .menu a {
+                text-decoration: none;
+                color: #f3e8e8;
+                padding: 12px 20px;
+                display: block;
+                transition: background 0.3s ease, color 0.3s ease;
+            }
+            .menu a:hover {
+                background: #444;
+                color: #fff;
+                border-radius: 8px;
+            }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background: #333;
+                min-width: 180px;
+                border-radius: 8px;
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+                overflow: hidden;
+            }
+            .dropdown-content li {
+                list-style: none;
+            }
+            .dropdown-content a {
+                padding: 12px;
+                display: block;
+                color: #ddd;
+                transition: background 0.3s ease;
+            }
+            .dropdown-content a:hover {
+                background: #555;
+                color: #fff;
+            }
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+            #informacion {
+                padding: 20px;
+                background: #1a1a1a;
+                border-radius: 8px;
+                margin-top: 20px;
+                text-align: center;
+                color: white;
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            }
+        </style>
+        
+        
+        
 
-        <h1>Sr Rick</h1>
 
-        <div class="container">
+       <!-- Sección Premium -->
 
-            <div class="header-image">
+       <section id="premium">
 
-                <img src="imagenes/rick.png" alt="Señor Rick">
+        <h2>Archivo gratis de la semana</h2>
+
+        <div class="premium-content">
+          <p>¡🔥 Esta semana es legendaria! 🔥 Disfruta gratis de todas las sagas de Dragon Ball por tiempo limitado. ¡No dejes pasar esta oportunidad única! 🚀💥</p>
+            <div class="contenedor-dragon-ball"></div>
+            
+
+           
+            <!-- Botón corregido con enlace a WhatsApp -->
+<button class="cool-button" onclick="window.location.href='https://wa.me/+573238632028?text=Hola%2C%20quiero%20consultar%20sobre%20el%20Archivo%201'">
+    🔥 Haz clic aquí 🔥
+</button>
+
+            
+
+           
+
+            <!-- Contenedor para la cuenta regresiva -->
+
+            <div class="countdown-timer">
+
+                <p><strong>Tiempo restante:</strong></p>
+
+                <div id="countdown"></div>
 
             </div>
 
-        <nav>
+        </div>
 
-            <a href="#premium">Curso gratis de la semana</a>
+    </section>
 
-        </nav>
 
-    </header>
+
+
+    <script>
+
+// Fecha objetivo para la cuenta regresiva (aquí puedes poner la fecha que desees)
+
+var targetDate = new Date("Feb 13, 2025 23:59:59").getTime();
+
+
+
+var countdownInterval = setInterval(function() {
+
+    var now = new Date().getTime();
+
+    var timeLeft = targetDate - now;
+
+
+
+    // Cálculos de tiempo restante
+
+    var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+
+    var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+    var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+
+    var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+
+
+    // Mostrar la cuenta regresiva
+
+    document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+
+
+    // Si la cuenta regresiva llega a cero, mostrar mensaje
+
+    if (timeLeft < 0) {
+
+        clearInterval(countdownInterval);
+
+        document.getElementById("countdown").innerHTML = "¡La oferta ha expirado!";
+
+    }
+
+}, 1000);
+
+</script>
+
+
 
  
 
@@ -364,92 +527,7 @@
 
  
 
-        <!-- Sección Premium -->
-
-        <section id="premium">
-
-            <h2>Curso gratis de la semana </h2>
-
-            <div class="premium-content">
-
-                <p>¡Este archivo es gratis solo por esta semana! Obtén acceso exclusivo al archivo.</p>
-
-               
-
-                <div class="whatsapp-links">
-
-                    <a href="https://wa.me/+573238632028?text=Hola%2C%20quiero%20consultar%20sobre%20el%20Archivo%201" class="image1" target="_blank"></a>
-
-                </div>
-
-               
-
-                <!-- Contenedor para la cuenta regresiva -->
-
-                <div class="countdown-timer">
-
-                    <p><strong>Tiempo restante:</strong></p>
-
-                    <div id="countdown"></div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-
-        <script>
-
-    // Fecha objetivo para la cuenta regresiva (aquí puedes poner la fecha que desees)
-
-    var targetDate = new Date("Feb 13, 2025 23:59:59").getTime();
-
- 
-
-    var countdownInterval = setInterval(function() {
-
-        var now = new Date().getTime();
-
-        var timeLeft = targetDate - now;
-
- 
-
-        // Cálculos de tiempo restante
-
-        var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-
-        var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-
-        var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-
-        var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
- 
-
-        // Mostrar la cuenta regresiva
-
-        document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-
- 
-
-        // Si la cuenta regresiva llega a cero, mostrar mensaje
-
-        if (timeLeft < 0) {
-
-            clearInterval(countdownInterval);
-
-            document.getElementById("countdown").innerHTML = "¡La oferta ha expirado!";
-
-        }
-
-    }, 1000);
-
-</script>
-
- 
+     
 
        
 
