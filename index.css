@@ -394,88 +394,6 @@ canvas {
         width: 60px;
     }
 }
-/* Contenedor de archivos */
-.file-store {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-/* Tarjeta de cada archivo en formato rectangular */
-.file-card {
-    display: flex;
-    align-items: center;
-    background: #fff;
-    border-radius: 10px;
-    padding: 15px;
-    width: 90%;
-    max-width: 500px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-    border: 1px solid #ddd;
-}
-
-.file-card:hover {
-    transform: scale(1.03);
-}
-
-/* Imagen del archivo a la izquierda */
-.file-img {
-    width: 120px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    flex-shrink: 0;
-}
-
-/* Contenedor de la descripción y botón */
-.file-info {
-    margin-left: 15px;
-    flex: 1;
-    text-align: left;
-}
-
-/* Estilos de texto */
-.file-info h3 {
-    font-size: 18px;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-.file-info p {
-    font-size: 14px;
-    color: #666;
-    margin: 5px 0;
-}
-
-.file-price {
-    font-size: 16px;
-    font-weight: bold;
-    color: #ff4d4d;
-    display: block;
-    margin-top: 5px;
-}
-
-/* Botón de WhatsApp */
-.whatsapp-btn {
-    display: inline-block;
-    background-color: #25d366;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 8px;
-    transition: background 0.3s ease-in-out;
-    font-size: 14px;
-}
-
-.whatsapp-btn:hover {
-    background-color: #1ebe57;
-}
-
 
 /* Contenedor de archivos */
 .file-store {
@@ -564,17 +482,35 @@ canvas {
 /* ⚡ RESPONSIVE ⚡ */
 @media screen and (max-width: 600px) {
     .file-card {
-        flex-direction: column;
+        flex-direction: row;  /* Mantiene imagen a la izquierda en móviles */
         align-items: center;
-        text-align: center;
+        justify-content: flex-start;
+        width: 100%; /* Asegura que ocupe el ancho completo */
     }
 
     .file-img {
-        width: 100px;
-        margin-bottom: 10px;
+        width: 100px; /* Ajusta tamaño para móviles */
     }
 
     .file-info {
-        margin-left: 0;
+        margin-left: 10px;
+    }
+
+    .file-info h3 {
+        font-size: 16px;
+    }
+
+    .file-info p {
+        font-size: 12px;
+    }
+
+    .file-price {
+        font-size: 14px;
+    }
+
+    .whatsapp-btn {
+        font-size: 12px;
+        padding: 6px 10px;
     }
 }
+
