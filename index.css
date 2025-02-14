@@ -306,7 +306,7 @@ canvas {
     background-color: #1ebe57;
 }
 
-/* 🔹 Imagen del archivo gratis */
+/* 🔹 Imagen del archivo gratis */_____________________________
 .archivo-img {
     width: 100%; /* Adaptable */
     max-width: 400px;
@@ -392,5 +392,189 @@ canvas {
     }
     .rick-img {
         width: 60px;
+    }
+}
+/* Contenedor de archivos */
+.file-store {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Tarjeta de cada archivo en formato rectangular */
+.file-card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    border: 1px solid #ddd;
+}
+
+.file-card:hover {
+    transform: scale(1.03);
+}
+
+/* Imagen del archivo a la izquierda */
+.file-img {
+    width: 120px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    flex-shrink: 0;
+}
+
+/* Contenedor de la descripción y botón */
+.file-info {
+    margin-left: 15px;
+    flex: 1;
+    text-align: left;
+}
+
+/* Estilos de texto */
+.file-info h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.file-info p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.file-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff4d4d;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Botón de WhatsApp */
+.whatsapp-btn {
+    display: inline-block;
+    background-color: #25d366;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 8px;
+    transition: background 0.3s ease-in-out;
+    font-size: 14px;
+}
+
+.whatsapp-btn:hover {
+    background-color: #1ebe57;
+}
+
+
+/* Contenedor de archivos */
+.file-store {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Tarjeta de cada archivo */
+.file-card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    border: 1px solid #ddd;
+}
+
+/* Efecto al pasar el mouse */
+.file-card:hover {
+    transform: scale(1.03);
+}
+
+/* Imagen del archivo */
+.file-img {
+    width: 120px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    flex-shrink: 0;
+}
+
+/* Contenedor de información */
+.file-info {
+    margin-left: 15px;
+    flex: 1;
+    text-align: left;
+}
+
+/* Estilos de texto */
+.file-info h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.file-info p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.file-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff4d4d;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Botón de compra */
+.whatsapp-btn {
+    display: inline-block;
+    background-color: #25d366;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 8px;
+    transition: background 0.3s ease-in-out;
+    font-size: 14px;
+    text-align: center;
+}
+
+.whatsapp-btn:hover {
+    background-color: #1ebe57;
+}
+
+/* ⚡ RESPONSIVE ⚡ */
+@media screen and (max-width: 600px) {
+    .file-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .file-img {
+        width: 100px;
+        margin-bottom: 10px;
+    }
+
+    .file-info {
+        margin-left: 0;
     }
 }
