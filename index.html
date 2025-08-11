@@ -1,29 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SEÑOR RICK</title>
-    <link rel="icon" type="image/png" href="imagenes/rick.png">
-    <link rel="stylesheet" href="index.css">
-    
+    <link rel="icon" type="image/png" href="https://via.placeholder.com/32x32?text=Rick">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="script.js" defer></script>
 </head>
 
 <body>
-    <canvas id="bg"></canvas> <!-- Fondo animado con Three.js -->
+    <!-- Fondo animado -->
+    <canvas id="bg"></canvas>
 
-    <div class="container">
-        <h1>SEÑOR RICK</h1>
-        <p>Bienvenido internauta 👩‍🚀</p>
+    <!-- Encabezado fijo -->
+   <div class="header-fijo">
+    <h1>SEÑOR RICK</h1>
+    <p>Bienvenido internauta :D 👩‍🚀</p>
+</div>
 
-        <nav class="tabs">
-            <button class="tab active" onclick="showTab('inicio')">Inicio</button>
-            <button class="tab" onclick="showTab('servicios')">Archivo gratis de la semana</button>
-            <button class="tab" onclick="showTab('contacto')">Por si necesitas a Rick</button>
-        </nav>
-        <div id="contacto" class="tab-content">
+<div class="container">
+    <!-- Navegación -->
+    <nav class="tabs">
+        <button class="tab active" onclick="showTab('inicio')">Inicio</button>
+        <button class="tab" onclick="showTab('servicios')">Archivo gratis de la semana</button>
+        <button class="tab" onclick="showTab('contacto')">Por si necesitas a Rick</button>
+    </nav>
+
+    <div class="content">
+        <!-- INICIO -->
+        <section id="inicio" class="tab-content active">
+            <h2>Archivos Disponibles 📁</h2>
+            <div class="file-store" id="fileStore">
+                <!-- Los productos se cargarán aquí con JavaScript -->
+            </div>
+        </section>
+
+        <!-- SERVICIOS -->
+        <section id="servicios" class="tab-content">
+            <h2>Archivo gratis de la semana 📂</h2>
+            <p id="contador">Tiempo restante: <span id="tiempo-restante"></span></p>
+            <img src="imagenes/dragon ball.jpg" alt="Dragon Ball Archivo Gratis" class="archivo-img">
+            <p>Descarga este increíble recurso gratis. Si necesitas más información, contáctame por WhatsApp.</p>
+            <a href="https://wa.me/+573238632028" class="whatsapp-btn" target="_blank">📩 Obtener Archivo</a>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contacto" class="tab-content">
             <div class="rick-notification">
                 <img src="imagenes/rick.png" alt="Rick Sánchez" class="rick-avatar">
                 <div class="rick-text">
@@ -32,44 +56,8 @@
                 </div>
             </div>
             <a href="https://wa.me/+573238632028" class="whatsapp-btn" target="_blank">📩 Responder a Rick</a>
-        </div>
-        
-        <div class="content">
-            <div id="inicio" class="tab-content active">
-                <h2>Archivos Disponibles 📁</h2>
-                <div class="file-store">
-                    <div class="file-card">
-                        <img src="imagenes/archivo1.png" alt="Archivo 1" class="file-img">
-                        <div class="file-info">
-                            <h3>Archivo Pro 1</h3>
-                            <p>Descripción corta del archivo.</p>
-                            <span class="file-price">$10.000</span>
-                            <a href="https://wa.me/+573238632028?text=Hola,%20quiero%20comprar%20Archivo%20Pro%201" class="whatsapp-btn" target="_blank">📩 Comprar</a>
-                        </div>
-                    </div>
-                    <div class="file-card">
-                        <img src="imagenes/archivo2.png" alt="Archivo 2" class="file-img">
-                        <div class="file-info">
-                            <h3>Archivo Pro 2</h3>
-                            <p>Descripción corta del archivo.</p>
-                            <span class="file-price">$15.000</span>
-                            <a href="https://wa.me/+573238632028?text=Hola,%20quiero%20comprar%20Archivo%20Pro%202" class="whatsapp-btn" target="_blank">📩 Comprar</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            
-            <div id="servicios" class="tab-content">
-                <h2>Archivo gratis de la semana 📂</h2>
-                <p id="contador">Tiempo restante: <span id="tiempo-restante"></span></p>
-                <img src="imagenes/dragon ball.jpg" alt="Archivo de la semana" class="archivo-img">
-                <p>Descarga este increíble recurso gratis. Si necesitas más información, contáctame por WhatsApp.</p>
-                <a href="https://wa.me/+573238632028" class="whatsapp-btn" target="_blank">📩 Obtener Archivo</a>
-            </div>
-
-            <div id="contacto" class="tab-content">Contáctanos en...</div>
-        </div>
+        </section>
     </div>
+</div>
 </body>
 </html>

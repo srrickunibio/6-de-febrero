@@ -1,0 +1,395 @@
+/* ====== BASE ====== */
+body {
+    font-family: sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    margin: 0;
+    background: linear-gradient(to bottom right, #4a0072, #000000); /* Fondo oscuro degradado */
+    overflow-x: hidden; /* Evita el scroll horizontal */
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+/* Fondo animado */
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+/* ====== ENCABEZADO FIJO ====== */
+.header-fijo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, rgba(74, 0, 114, 0.9), rgba(0, 0, 0, 0.9)); /* Fondo semitransparente */
+    backdrop-filter: blur(8px);
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.header-fijo h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #e0b0ff; /* Morado claro */
+    margin: 0;
+    text-shadow: 0 0 10px rgba(224, 176, 255, 0.5);
+}
+
+.header-fijo p {
+    color: #c0a0e0; /* Morado más suave */
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+/* ====== CONTENEDOR PRINCIPAL ====== */
+.container {
+    position: relative;
+    margin: 180px auto 40px; /* Espacio para el header y las tabs */
+    width: 90%;
+    max-width: 600px;
+    padding: 150px;
+    background: rgba(8, 6, 6, 0.08); /* Fondo translúcido */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px);
+    text-align: center;
+    z-index: 10;
+    border: 1px solid rgba(0, 0, 0, 0.585);
+}
+
+.container h2 {
+    font-size: 2rem;
+    color: #17101a;
+    margin-bottom: 30px;
+    text-shadow: 0 0 8px rgba(224, 176, 255, 0.3);
+}
+
+.container p {
+    color: #d0c0e0;
+}
+
+/* ====== MENÚ DE PESTAÑAS ====== */
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    background: rgba(154, 27, 27, 0.15);
+    padding: 8px;
+    border-radius: 50px; /* Botones más redondeados */
+    flex-wrap: wrap;
+    position: fixed;
+    top: 90px; /* Ajustado para que esté más arriba */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 580px;
+    z-index: 9999;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(24, 17, 17, 0.839);
+}
+
+.tab {
+    background: none;
+    border: none;
+    color: #000000;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    flex: 1;
+    text-align: center;
+    min-width: 100px;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+}
+
+.tab:hover {
+    background: rgba(255, 255, 255, 0.25);
+    color: #fff;
+}
+
+.tab.active {
+    background: #e0b0ff;
+    color: #513460;
+    box-shadow: 0 3px 10px rgba(224, 176, 255, 0.4);
+}
+
+/* ====== CONTENIDO DE LAS PESTAÑAS ====== */
+.content {
+    padding: 20px 0;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.6s ease-out;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ====== BOTONES WHATSAPP ====== */
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 25px;
+    background-color: #25D366;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    margin: 20px auto;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-btn:hover {
+    background-color: #1ebe57;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.6);
+}
+
+/* ====== IMAGEN ARCHIVO GRATIS ====== */
+.archivo-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ====== CONTADOR ====== */
+#contador {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ff6b6b; /* Rojo vibrante */
+    margin-bottom: 15px;
+    text-shadow: 0 0 5px rgba(255, 107, 107, 0.5);
+}
+
+/* ====== NOTIFICACIÓN RICK ====== */
+.rick-notification {
+    width: 90%;
+    max-width: 400px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 30px auto;
+    border: 1px solid #eee;
+    animation: slideIn 0.8s ease-out;
+}
+
+.rick-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.rick-text {
+    flex: 1;
+    text-align: left;
+}
+
+.rick-text strong {
+    font-size: 1.1rem;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.rick-text p {
+    font-size: 0.95rem;
+    color: #666;
+    margin: 0;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* ====== TIENDA DE ARCHIVOS (GRID) ====== */
+.file-store {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.file-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.file-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.file-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    margin-bottom: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.file-info {
+    text-align: center;
+    flex-grow: 1; /* Para que ocupe el espacio restante */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.file-info h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.file-info p {
+    font-size: 0.95rem;
+    color: #c0a0e0;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Para que la descripción ocupe más espacio */
+}
+
+.file-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff4d4d; /* Rojo para el precio */
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 5px rgba(255, 77, 77, 0.5);
+}
+
+/* ====== MEDIA QUERIES ====== */
+@media (max-width: 768px) {
+    .header-fijo h1 {
+        font-size: 2rem;
+    }
+    .header-fijo p {
+        font-size: 1rem;
+    }
+    .tabs {
+        top: 100px;
+        max-width: 95%;
+        padding: 6px;
+    }
+    .tab {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+    .container {
+        margin-top: 160px;
+        padding: 20px;
+    }
+    .container h2 {
+        margin-top: 125px;
+        font-size: 1.8rem;
+        color: #eee;
+    }
+    .whatsapp-btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+    .file-store {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+    }
+    .file-card {
+        flex-direction: row; /* Horizontal en móviles */
+        text-align: left;
+        padding: 2px;
+        margin-top: 3px;
+    }
+    .file-img {
+        width: 100px;
+        height: 100px;
+        margin-right: 15px;
+        margin-bottom: 2px;
+    }
+    .file-info {
+        align-items: flex-start;
+    }
+    .file-info h3 {
+        font-size: 1.2rem;
+    }
+    .file-info p {
+        font-size: 0.85rem;
+    }
+    .file-price {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-fijo h1 {
+        font-size: 1.2rem;
+    }
+    .header-fijo p {
+        font-size: 0.9rem;
+    }
+    .tabs {
+        top: 1px;
+        flex-direction: column; /* Pestañas apiladas */
+        border-radius: 5px;
+    }
+    .tab {
+        width:100%;
+        margin-bottom: 5px;
+    }
+    .container {
+        margin-top: 120px; /* Más espacio para las tabs apiladas */
+        padding: 15px;
+    }
+    .rick-notification {
+          margin-top: 125px;
+        flex-direction: column;
+        text-align: center;
+        gap: 1px;
+    }
+    .rick-text {
+        text-align: center;
+    }
+}
